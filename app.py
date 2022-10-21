@@ -49,7 +49,8 @@ fig3 = px.line(data3,x='Years',y='Percentage', title='Population growth rate in 
 fig4 = px.line(data4,x='Years',y='Percentage', title='Unemployment rate in Nigeria FROM 2012-2017')
 
 app=Dash(__name__)
-server=app.server
+
+server = app.server
 app.title= 'DIFFERENT INDICATORS IN NIGERIA AND THEIR PERCENTAGE FROM 2012-2017'
 
 app.layout=html.Div(children=[html.H1(children='DIFFERENT INDICATORS IN NIGERIA',
@@ -67,5 +68,6 @@ dcc.Input(id='num', type='number'),
                     ], style={'width':'50%','float':'right'}) 
                              ])
             
-app.run_server()
+if __name__=='__main__':
+  app.run_server(debug=True)
 
