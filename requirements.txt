@@ -3,4 +3,4 @@ dash
 jupyter-dash
 gunicorn
 yfinance
-
+openpyxl
